@@ -4,11 +4,14 @@
   "description": "TOP: ToDo List",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dustinshook/todo-list.git"
+    "url": "https://github.com/dustinshook/todo-list.git"
   },
   "keywords": [
     "ToDo"
@@ -20,7 +23,13 @@
   },
   "homepage": "https://github.com/dustinshook/todo-list#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0"
   }
 }
