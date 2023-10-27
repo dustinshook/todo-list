@@ -1,12 +1,6 @@
 import './header.css';
 
-const renderHeader = () => {
-
-    const navItems = [
-        'Home',
-        'Projects',
-        'About'
-    ];
+const renderHeader = (...navItems) => {
     
     const header = document.createElement('div');
         header.id = 'header';
@@ -35,3 +29,5 @@ const renderHeader = () => {
 
     return header;
 };
+
+export { renderHeader };

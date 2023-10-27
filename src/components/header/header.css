@@ -2,14 +2,14 @@
 
 #header #nav {
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px dotted hsl(0deg 0% 0% / 0.2);
     padding: 1em;
 }
 
 #header #nav ul {
     list-style: none;
     display: flex;
-    gap: 1em;
+    gap: 2em;
     margin: 0;
     align-items: baseline;
 }
@@ -18,4 +18,9 @@
     text-decoration: none;
     color: #000;
     font-weight: bold;
+}
+
+#header #nav ul .nav-item:first-child{
+    margin-right: auto;
+    font-size: 1.5em;
 }
