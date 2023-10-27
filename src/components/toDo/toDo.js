@@ -1,5 +1,4 @@
-import './toDo.css'
-import 'date-fns' 
+import './toDo.css';
 
 const toDo = () => {
 
@@ -28,6 +27,10 @@ const toDo = () => {
     const removeCheckListItem = item => checkList.splice(checkList.indexOf(item), 1);
     const getCheckList = () => checkList;
 
+    let completed = false;
+    const toggleCompleted = () => completed = !completed;
+    const getCompleted = () => completed;
+
     return {
         setTitle,
         getTitle,
@@ -41,7 +44,9 @@ const toDo = () => {
         getNotes,
         addCheckListItem,
         removeCheckListItem,
-        getCheckList
+        getCheckList,
+        toggleCompleted,
+        getCompleted
     };
 
 
