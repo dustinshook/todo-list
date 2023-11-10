@@ -4,6 +4,7 @@ const renderSidebar = (...projects) => {
 
 	const sidebar = document.createElement('div');
 	sidebar.id = 'sidebar';
+	sidebar.classList.add('open');
 
 	const sidebarWrapper = document.createElement('div');
 	sidebarWrapper.id = 'sidebar-wrapper';
