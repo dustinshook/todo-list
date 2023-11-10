@@ -10,7 +10,7 @@
 #header #nav {
     overflow: hidden;
     border-bottom: 1px dotted hsl(0deg 0% 0% / 0.2);
-    padding: 1em;
+    padding: 0.5em;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -26,17 +26,16 @@
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+}
+
+#header #nav ul .nav-item:hover {
+    background-color: hsl(0deg 0% 0% / 0.1);
+    cursor: pointer;
 }
 
 #header #nav ul .nav-item:first-child{
     margin-right: auto;
     font-size: 1.5em;
 }
-
-@media (width >= 768px) {
-    #header #nav {
-        max-width: 1024px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-  }

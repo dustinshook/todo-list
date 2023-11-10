@@ -1,0 +1,66 @@
+/*side bar.css*/
+
+#sidebar {
+  position: fixed;
+  top: 73px;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #fff;
+  padding: 0.25em;
+  overflow-y: auto;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.open {
+  transform: translateX(0);
+}
+
+#sidebar #sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+
+#sidebar-wrapper #sidebar-nav .sidebar-items {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar-wrapper #sidebar-nav .sidebar-item {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+}
+
+#sidebar-wrapper #sidebar-nav .sidebar-item:nth-child(1)::before {
+    content: "\f007"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    margin-right: 10px;
+}
+
+#sidebar-wrapper #sidebar-nav .sidebar-item:nth-child(2)::before {
+    content: "\f005"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    margin-right: 10px;
+}
+
+#sidebar-wrapper #sidebar-nav .sidebar-item:nth-child(3)::before {
+    content: "\f784"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    margin-right: 10px;
+}
+
+#sidebar-wrapper #sidebar-nav .sidebar-item:hover {
+    background-color: hsl(0deg 0% 0% / 0.1);
+    cursor: pointer;
+}
