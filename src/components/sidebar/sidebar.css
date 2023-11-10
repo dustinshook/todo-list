@@ -12,13 +12,17 @@
   z-index: 100;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  border-right: 1px solid hsl(0deg 0% 0% / 0.2);
 }
 
 #sidebar.open {
   transform: translateX(0);
 }
 
-#sidebar #sidebar-wrapper {
+
+#sidebar-wrapper #sidebar-nav {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -29,6 +33,9 @@
 #sidebar-wrapper #sidebar-nav .sidebar-items {
     list-style: none;
     padding: 0;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
 }
 
 #sidebar-wrapper #sidebar-nav .sidebar-item {
@@ -51,6 +58,8 @@
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900; 
     margin-right: 10px;
+    position: relative;
+    right: 2px;
 }
 
 #sidebar-wrapper #sidebar-nav .sidebar-item:nth-child(3)::before {
@@ -63,4 +72,81 @@
 #sidebar-wrapper #sidebar-nav .sidebar-item:hover {
     background-color: hsl(0deg 0% 0% / 0.1);
     cursor: pointer;
+}
+
+#sidebar-wrapper #sidebar-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+#sidebar-wrapper #sidebar-projects #sidebar-projects-header {
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5em;
+    background-color: hsl(0deg 0% 0% / 0.1);
+
+}
+
+#sidebar-projects-header span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#sidebar-projects-header #sidebar-projects-header-btn {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.3em;
+    padding: 0.25em 0.5em;
+    background-color: white;
+}
+
+#sidebar-projects-header #sidebar-projects-header-btn:hover {
+    background-color: hsl(0deg 0% 0% / 0.1);
+}
+
+#sidebar-projects ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+}
+
+#sidebar-projects ul .sidebar-project {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+}
+
+#sidebar-projects ul .sidebar-project:hover {
+    background-color: hsl(0deg 0% 0% / 0.1);
+    cursor: pointer;
+}
+
+#sidebar-projects ul .sidebar-project::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#sidebar-projects ul .sidebar-project.high::before {
+    background-color: red;
+}
+
+#sidebar-projects ul .sidebar-project.medium::before {
+    background-color: yellow;
+}
+
+#sidebar-projects ul .sidebar-project.low::before {
+    background-color: green;
 }

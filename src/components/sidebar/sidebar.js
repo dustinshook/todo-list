@@ -27,16 +27,28 @@ const renderSidebar = (...projects) => {
 	const sidebarProjects = document.createElement('div');
 	sidebarProjects.id = 'sidebar-projects';
 
+	const sidebarProjectsHeader = document.createElement('div');
+	sidebarProjectsHeader.id = 'sidebar-projects-header';
+
+	const sidebarProjectsHeaderTitle = document.createElement('span');
+	sidebarProjectsHeaderTitle.textContent = 'Projects';
+	sidebarProjectsHeader.appendChild(sidebarProjectsHeaderTitle);
+
+	const sidebarProjectsHeaderBtn = document.createElement('div');
+	sidebarProjectsHeaderBtn.id = 'sidebar-projects-header-btn';
+	sidebarProjectsHeaderBtn.classList.add('fas', 'fa-plus');
+	sidebarProjectsHeader.appendChild(sidebarProjectsHeaderBtn);
+
 	const sidebarProjectsUl = document.createElement('ul');
-	sidebarProjectsUl.classList.add('sidebar-projects');
 
 	projects.forEach((project) => {
 		const sidebarProjectsLi = document.createElement('li');
-		sidebarProjectsLi.classList.add('sidebar-project');
+		sidebarProjectsLi.classList.add('sidebar-project', 'low');
 		sidebarProjectsLi.textContent = project;
 		sidebarProjectsUl.appendChild(sidebarProjectsLi);
 	});
 
+	sidebarProjects.appendChild(sidebarProjectsHeader);
 	sidebarProjects.appendChild(sidebarProjectsUl);
 	sidebarWrapper.appendChild(sidebarProjects);
 
