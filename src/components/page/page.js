@@ -1,4 +1,5 @@
 import './page.css'
+import { renderContentCard } from '../content-card/content-card.js';
 
 const renderPage = () => {
     const page = document.createElement('div');
@@ -17,11 +18,9 @@ const renderPage = () => {
     const contentWrapper = document.createElement('div');
     contentWrapper.id = 'content-wrapper';
 
-    const tools = document.createElement('div');
-    tools.id = 'tools';
+    const contentCard = renderContentCard();
 
-    contentWrapper.appendChild(tools);
-
+    contentWrapper.appendChild(contentCard);
     page.appendChild(titleWrapper);
     page.appendChild(contentWrapper);
 
