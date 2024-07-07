@@ -8,7 +8,7 @@ const renderTaskList = (tasks) => {
     const taskItem = document.createElement('div');
     taskItem.classList.add('task-item');
 
-    const taskItemCheckbox = document.createElement('input');
+    const taskItemCheckbox = document.createElement('input'); 
     taskItemCheckbox.setAttribute('type', 'checkbox');
     taskItem.appendChild(taskItemCheckbox);
 
