@@ -1,5 +1,6 @@
 import './content-card.css';
 import { renderAddButton } from '../add-button/add-button.js';
+import { renderTaskList } from '../task-list/task-list.js';
 
 const renderContentCard = () => {
     const contentCard = document.createElement('div');
@@ -15,6 +16,9 @@ const renderContentCard = () => {
 
     const cardContent = document.createElement('div');
     cardContent.classList.add('card-content');
+
+    const taskList = renderTaskList(['Task 1', 'Task 2', 'Task 3']);
+    cardContent.appendChild(taskList);
 
     const cardButton = renderAddButton();
     cardContent.appendChild(cardButton);

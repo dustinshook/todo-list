@@ -1,0 +1,17 @@
+.card-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  background-color: hsl(0deg 0% 0% / 0.1);
+}
+
+.card-button input {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.card-button input:focus-visible {
+  outline: none;
+}
