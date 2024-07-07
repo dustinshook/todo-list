@@ -1,4 +1,5 @@
 import './content-card.css';
+import { renderAddButton } from '../add-button/add-button.js';
 
 const renderContentCard = () => {
     const contentCard = document.createElement('div');
@@ -15,21 +16,12 @@ const renderContentCard = () => {
     const cardContent = document.createElement('div');
     cardContent.classList.add('card-content');
 
-    const cardButton = document.createElement('div');
-    cardButton.classList.add('card-button');
-
-    const cardButtonIcon = document.createElement('i');
-    cardButtonIcon.classList.add('fas', 'fa-plus');
-    cardButton.appendChild(cardButtonIcon);
-
-    const cardButtonTitle = document.createElement('span');
-    cardButtonTitle.textContent = 'Add Task';
-    cardButton.appendChild(cardButtonTitle);
-
+    const cardButton = renderAddButton();
+    cardContent.appendChild(cardButton);
+    
     contentCard.appendChild(cardHeader);
     contentCard.appendChild(cardContent);
-    contentCard.appendChild(cardButton);
-
+    
     return contentCard;
 };
 

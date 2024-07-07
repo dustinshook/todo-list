@@ -30,6 +30,7 @@ const proj = projects();
 
 proj.create('Default Project', toDo());
 
-console.log(proj.get());
+
+console.log(proj.getAll());
 
 test();

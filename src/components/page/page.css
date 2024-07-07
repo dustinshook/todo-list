@@ -24,3 +24,10 @@
     font-weight: 900;
     margin-right: 10px;
 }
+
+#page #content-wrapper {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

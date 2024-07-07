@@ -8,12 +8,16 @@ const projects = () => {
     };
 
     const remove = project => projects.splice(projects.indexOf(project), 1);
-    const get = () => projects;
+    
+    const getAll = () => projects;
+    
+    const getProject = (index) => projects[index];
 
     return {
         create,
         remove,
-        get
+        getAll,
+        getProject
     };
 };
 
